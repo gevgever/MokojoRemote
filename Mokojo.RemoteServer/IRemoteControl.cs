@@ -8,5 +8,6 @@ namespace Mokojo.RemoteServer
     interface IRemoteControl
     {
         void Do(RemoteCommand i_remoteCommand);
+        int CountPendingCommands();
     }
 }

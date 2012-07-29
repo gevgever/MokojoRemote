@@ -5,13 +5,14 @@
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{992FA769-9492-4FB8-B0E4-EF642AD6E021}</ProjectGuid>
-    <OutputType>WinExe</OutputType>
+    <ProjectGuid>{C19A9BEA-57C0-4F19-B475-6A99D6F35970}</ProjectGuid>
+    <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Mokojo.RemoteService</RootNamespace>
-    <AssemblyName>Mokojo.RemoteService</AssemblyName>
+    <RootNamespace>Mokojo.TestRemoteClient</RootNamespace>
+    <AssemblyName>Mokojo.TestRemoteClient</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
-    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
@@ -35,52 +36,27 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
-    <Reference Include="System.Configuration.Install" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.ServiceModel" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
-    <Reference Include="System.ServiceProcess" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ProjectInstaller.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="ProjectInstaller.Designer.cs">
-      <DependentUpon>ProjectInstaller.cs</DependentUpon>
-    </Compile>
-    <Compile Include="RemoteControlService.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="RemoteControlService.Designer.cs">
-      <DependentUpon>RemoteControlService.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="ProjectInstaller.resx">
-      <DependentUpon>ProjectInstaller.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="RemoteControlService.resx">
-      <DependentUpon>RemoteControlService.cs</DependentUpon>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Mokojo.RemoteServer\Mokojo.RemoteServer.csproj">
-      <Project>{31614017-8640-4812-A30D-EF81794BF98B}</Project>
-      <Name>Mokojo.RemoteServer</Name>
+    <ProjectReference Include="..\Mokojo.RemoteClient\Mokojo.RemoteClient.csproj">
+      <Project>{109EA7B2-8CEA-40E2-BC6D-A7C12EE192F5}</Project>
+      <Name>Mokojo.RemoteClient</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <SubType>Designer</SubType>
-    </None>
+    <None Include="App.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

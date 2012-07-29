@@ -26,7 +26,7 @@
     <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="39120270-e984-4aee-a21c-849f7ddbe1d2" SourceId="1" SourceUrl="http://localhost/Mokojo.RemoteService/RemoteControl/mex" />
     <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="d05a91f4-3b03-49df-acf5-0fc0e50d34b2" SourceId="1" SourceUrl="http://localhost/Mokojo.RemoteService/RemoteControl/mex" />
     <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="f13710ed-89e4-42c5-82ee-fa748bf8f07b" SourceId="1" SourceUrl="http://localhost/Mokojo.RemoteService/RemoteControl/mex" />
-    <MetadataFile FileName="Mokojo.RemoteService.xsd" MetadataType="Schema" ID="d4dbbe8b-1900-4980-92ee-d41ecedc31f7" SourceId="1" SourceUrl="http://localhost/Mokojo.RemoteService/RemoteControl/mex" />
+    <MetadataFile FileName="Mokojo.RemoteServer.xsd" MetadataType="Schema" ID="91d15e57-a7c1-475c-a147-e78f657812cf" SourceId="1" SourceUrl="http://localhost/Mokojo.RemoteService/RemoteControl/mex" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

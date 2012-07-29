@@ -33,7 +33,7 @@
     <xsd:schema targetNamespace="http://tempuri.org/Imports">
       <xsd:import namespace="http://tempuri.org/" />
       <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
-      <xsd:import namespace="http://schemas.datacontract.org/2004/07/Mokojo.RemoteService" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/Mokojo.RemoteServer" />
     </xsd:schema>
   </wsdl:types>
   <wsdl:message name="RemoteControl_Do_InputMessage">
@@ -42,10 +42,20 @@
   <wsdl:message name="RemoteControl_Do_OutputMessage">
     <wsdl:part name="parameters" element="tns:DoResponse" />
   </wsdl:message>
+  <wsdl:message name="RemoteControl_CountPendingCommands_InputMessage">
+    <wsdl:part name="parameters" element="tns:CountPendingCommands" />
+  </wsdl:message>
+  <wsdl:message name="RemoteControl_CountPendingCommands_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CountPendingCommandsResponse" />
+  </wsdl:message>
   <wsdl:portType name="RemoteControl">
     <wsdl:operation name="Do">
       <wsdl:input wsaw:Action="http://tempuri.org/RemoteControl/Do" message="tns:RemoteControl_Do_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/RemoteControl/DoResponse" message="tns:RemoteControl_Do_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CountPendingCommands">
+      <wsdl:input wsaw:Action="http://tempuri.org/RemoteControl/CountPendingCommands" message="tns:RemoteControl_CountPendingCommands_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/RemoteControl/CountPendingCommandsResponse" message="tns:RemoteControl_CountPendingCommands_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="TCP" type="tns:RemoteControl">
@@ -53,6 +63,15 @@
     <soap12:binding transport="http://schemas.microsoft.com/soap/tcp" />
     <wsdl:operation name="Do">
       <soap12:operation soapAction="http://tempuri.org/RemoteControl/Do" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CountPendingCommands">
+      <soap12:operation soapAction="http://tempuri.org/RemoteControl/CountPendingCommands" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>

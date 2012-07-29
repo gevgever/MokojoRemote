@@ -53,8 +53,10 @@
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="app.config" />
-    <None Include="Service References\RemoteControlClient\Mokojo.RemoteService.xsd">
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\RemoteControlClient\Mokojo.RemoteServer.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Service References\RemoteControlClient\service.wsdl" />

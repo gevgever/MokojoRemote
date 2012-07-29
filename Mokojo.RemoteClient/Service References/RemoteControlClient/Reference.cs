@@ -15,7 +15,7 @@ namespace Mokojo.RemoteClient.RemoteControlClient {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="RemoteCommand", Namespace="http://schemas.datacontract.org/2004/07/Mokojo.RemoteService")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="RemoteCommand", Namespace="http://schemas.datacontract.org/2004/07/Mokojo.RemoteServer")]
     [System.SerializableAttribute()]
     public partial class RemoteCommand : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
@@ -80,6 +80,9 @@ namespace Mokojo.RemoteClient.RemoteControlClient {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/RemoteControl/Do", ReplyAction="http://tempuri.org/RemoteControl/DoResponse")]
         void Do(Mokojo.RemoteClient.RemoteControlClient.RemoteCommand i_remoteCommand);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/RemoteControl/CountPendingCommands", ReplyAction="http://tempuri.org/RemoteControl/CountPendingCommandsResponse")]
+        int CountPendingCommands();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -111,6 +114,10 @@ namespace Mokojo.RemoteClient.RemoteControlClient {
         
         public void Do(Mokojo.RemoteClient.RemoteControlClient.RemoteCommand i_remoteCommand) {
             base.Channel.Do(i_remoteCommand);
+        }
+        
+        public int CountPendingCommands() {
+            return base.Channel.CountPendingCommands();
         }
     }
 }
