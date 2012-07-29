@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mokojo.RemoteService", "Mokojo.RemoteService\Mokojo.RemoteService.csproj", "{31614017-8640-4812-A30D-EF81794BF98B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mokojo.RemoteServer", "Mokojo.RemoteService\Mokojo.RemoteServer.csproj", "{31614017-8640-4812-A30D-EF81794BF98B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mokojo.RemoteClient", "Mokojo.RemoteClient\Mokojo.RemoteClient.csproj", "{109EA7B2-8CEA-40E2-BC6D-A7C12EE192F5}"
 	ProjectSection(ProjectDependencies) = postProject

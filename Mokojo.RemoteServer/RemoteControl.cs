@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.ServiceModel;
 
-namespace Mokojo.RemoteService
+namespace Mokojo.RemoteServer
 {
     [ServiceContract]
     public class RemoteControl:IRemoteControl
