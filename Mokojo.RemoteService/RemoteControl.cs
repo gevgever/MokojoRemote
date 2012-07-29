@@ -7,7 +7,7 @@ using System.ServiceModel;
 namespace Mokojo.RemoteService
 {
     [ServiceContract]
-    public class RemoteControlL:IRemoteControl
+    public class RemoteControl:IRemoteControl
     {
         [OperationContract]
         public void Do(RemoteCommand i_remoteCommand)
